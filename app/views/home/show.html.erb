@@ -1,0 +1,12 @@
+<% if notice %> 
+	<p id="notice"><%= notice %></p> 
+<% end %>
+
+<h1>WELCOME to TWIT_BOOK</h1>
+
+Hello <%= current_account ? current_account.login : "stranger" %>!
+
+<% if current_account %>
+  <%= link_to 'Destroy', edit_session_path , :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+  
